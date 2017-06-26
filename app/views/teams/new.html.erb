@@ -1,0 +1,18 @@
+<h1>Add a team:</h1>
+<%= form_for @team do |t| %>
+  <div>
+    <%= t.text_field :name, placeholder: 'team name' %>
+  </div>
+  <div>
+    <%= t.text_area :description, placeholder: 'team description' %>
+  </div>
+  <div>
+    <%= t.text_field :logo, placeholder: 'url to team logo' %>
+  </div>
+  <div>
+    <%= t.number_field :user_id, placeholder: 'user id' %>
+  </div>
+  <div>
+    <%= t.submit %>
+  </div>
+<% end %>

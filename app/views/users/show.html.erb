@@ -1,0 +1,10 @@
+<h1><%= @user.username %></h1>
+<ul>
+    <li><%= @user.first %></li>
+    <li><%= @user.last %></li>
+    <li><%= @user.username %></li>
+    <li><%= @user.email %></li>
+</ul>
+
+<%= link_to 'edit', edit_user_path %>
+<%= link_to 'back', users_path %>
