@@ -9,9 +9,9 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
+
     <div class='container'>
-      <%= link_to 'users', users_path %>
-      <%= link_to 'teams', teams_path %>
       <%= yield %>
     </div>
   </body>

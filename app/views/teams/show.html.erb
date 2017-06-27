@@ -1,6 +1,33 @@
-<h1><%= @team.name %></h1>
-<%= image_tag @team.logo %>
-<p><%= @team.description %></p>
+<h1><%= image_tag @team.logo %> <%= @team.name %></h1>
+<h4><%= @team.description %></h4>
 
-<%= link_to 'edit', edit_team_path %>
-<%= link_to 'back', teams_path %>
+<div><%= link_to 'edit', edit_team_path %></div>
+<div><%= link_to 'back', teams_path %></div><br>
+
+<h4>posts:</h4>
+
+<ul>
+  <% @team.posts.each do |post| %>
+    <li>
+      <h4>By: <%= post.user.username %> -
+      <%= time_ago_in_words post.created_at%> ago</h4>
+      <h4><%= post.title %></h4>
+      <%= post.body %>
+    </li><br>
+  <% end %>
+</ul><br>
+
+<%= form_for [@team, @post] do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: 'post title' %>
+  </div>
+  <div>
+    <%= f.text_area :body, placeholder: 'what do you want to talk about?'%>
+  </div>
+  <div>
+    <%= f.number_field :user_id, placeholder: 'user id'%>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div><br>
+<% end %>

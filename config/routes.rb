@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  root 'users#index'
+  root 'teams#index'
 
   resources :users
   resources :teams
-  resources :posts
+
+  post '/teams/:id/posts' => 'posts#create', as: :team_posts
 
 end
