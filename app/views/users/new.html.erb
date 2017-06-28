@@ -1,24 +1,26 @@
-<h1>Sign up:</h1>
-<%= form_for @user do |u| %>
-  <div>
-    <%= u.text_field :first, placeholder: 'first name' %>
-  </div>
-  <div>
-    <%= u.text_field :last, placeholder: 'last name' %>
-  </div>
-  <div>
-    <%= u.text_field :username, placeholder: 'your username' %>
-  </div>
-  <div>
-    <%= u.email_field :email, placeholder: 'email address' %>
-  </div>
-  <div>
-    <%= u.password_field :password, placeholder: 'password' %>
-  </div>
-  <div>
-    <%= u.password_field :password_confirmation, placeholder: 'confirm password' %>
-  </div>
-  <div>
-    <%= u.submit %>
-  </div>
-<% end %>
+<div class='signup'>
+  <h1>Sign up:</h1><br>
+  <%= form_for @user do |u| %>
+    <div>
+      <%= u.text_field :first, placeholder: 'first name', class: "form-control"%>
+    </div><br>
+    <div>
+      <%= u.text_field :last, placeholder: 'last name', class: "form-control" %>
+    </div><br>
+    <div>
+      <%= u.text_field :username, placeholder: 'your username', class: "form-control" %>
+    </div><br>
+    <div>
+      <%= u.email_field :email, placeholder: 'email address', class: "form-control" %>
+    </div><br>
+    <div>
+      <%= u.password_field :password, placeholder: 'password', class: "form-control" %>
+    </div><br>
+    <div>
+      <%= u.password_field :password_confirmation, placeholder: 'confirm password', class: "form-control" %>
+    </div><br>
+    <div>
+      <%= u.submit class: 'btn btn-success' %>
+    </div>
+  <% end %>
+</div>

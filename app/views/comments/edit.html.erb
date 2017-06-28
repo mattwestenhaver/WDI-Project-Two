@@ -1,0 +1,11 @@
+<h2>Edit comment:</h2>
+<%= form_for @comment do |c| %>
+  <div>
+    <%= c.text_area :body, placeholder: 'what do you want to comment about?'%>
+  </div>
+  <div>
+    <%= c.submit %>
+  </div><br>
+<% end %>
+
+<%= link_to 'cancel', team_post_path %>

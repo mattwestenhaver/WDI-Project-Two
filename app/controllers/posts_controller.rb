@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @comment = Comment.new
   end
 
   def new
@@ -13,7 +15,7 @@ class PostsController < ApplicationController
     @team.posts.create({
       title: params[:post][:title],
       body: params[:post][:body],
-      user_id: params[:post][:user_id],
+      user_id: session[:user_id],
       team_id: @team.id
     })
 
