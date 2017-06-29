@@ -15,7 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-img {
+.team-name img {
   max-width: 50px;
   max-height: 70px;
 }
@@ -59,11 +59,12 @@ body {
   padding-bottom: 0;
   position: static;
   bottom: 0;
+  opacity: 1;
 }
 
 #footer .container p {
   color: #a9a9a9;
-  line-height: 12px;
+  line-height: 18px;
 }
 
 .container {
@@ -72,7 +73,7 @@ body {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
-  opacity: 0.85;
+  opacity: 0.89;
   -webkit-box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.75);
@@ -134,4 +135,20 @@ hr {
 .signup {
   width: 500px;
   margin: 0 auto;
+}
+
+.userprof {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.userprof ul {
+  padding-left: 0;
+}
+
+.userprof img {
+  width: 300px;
+  margin: 20px auto 10px auto;
+  opacity: 0.99;
 }
