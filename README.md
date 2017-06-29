@@ -2,7 +2,7 @@
 ###### Created by Matthew Westenhaver
 ---
 
-###Welcome to 30 Yard Screamer!
+### Welcome to 30 Yard Screamer!
 
 30 Yard Screamer is a platform to talk and connect with other people around the world about your favorite soccer teams and interact with fellow fans.
 
