@@ -1,24 +1,11 @@
-# README
+# 30 Yard Screamer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###Welcome to 30 Yard Screamer!
 
-Things you may want to cover:
+30 Yard Screamer is a platform to talk and connect with other people around the world about your favorite soccer teams and interact with fellow fans.
 
-* Ruby version
+Before we even began the project, I knew I wanted to create a soccer blog/social network in which fans could discuss their opinions about their favorite teams.
 
-* System dependencies
+## ERD
+![Imgur](http://i.imgur.com/Uud8VrI.jpg)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -49,20 +49,20 @@ body {
   background-position: center;
 }
 
-#footer .container {
+#footer .foot {
   text-align: center;
   background: #1e1e1e;
   margin-bottom: 0;
-  width: 100%;
   box-shadow: none;
   padding-top: 10px;
-  padding-bottom: 0;
+  padding-bottom: 8px;
   position: static;
   bottom: 0;
   opacity: 1;
+  border-radius: 10px;
 }
 
-#footer .container p {
+#footer .foot p {
   color: #a9a9a9;
   line-height: 18px;
 }
