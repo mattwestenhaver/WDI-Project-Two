@@ -1,5 +1,5 @@
 # 30 Yard Screamer
-######Created by Matthew Westenhaver
+###### Created by Matthew Westenhaver
 ---
 
 ###Welcome to 30 Yard Screamer!
