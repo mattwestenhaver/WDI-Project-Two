@@ -1,9 +1,11 @@
 <div class='teamwrap'>
-  <h1>Teams</h1>
+  <h1>Team Pages:</h1>
   <ul>
-    <% @teams.each do |t| %>
-      <li><%= image_tag t.logo %> <%= link_to t.name, team_path(t) %></li>
+    <% @teams.sort.each do |t| %>
+      <li><%= image_tag t.logo %> <%= link_to t.name, team_path(t) %> - <span class='small-font'><%= t.posts.count %> topics</span></li>
     <% end %>
+    <% if session[:user_id] == 1 %>
       <br><li><%= link_to 'Add a new team', new_team_path %></li>
+    <% end %>
   </ul>
 </div>

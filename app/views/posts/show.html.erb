@@ -1,12 +1,15 @@
 <div class='team-name'>
   <div><%= link_to 'back', team_path(@post.team) %></div>
-</div>
+</div><br>
 
 <div class='wrapper'>
+  <div class='post-team-name'>
+    <h1><%= image_tag @team.logo %></h1>
+  </div>
   <h2 class='post-title'><%= @post.title %></h2>
-  <hr>
+  <br><hr><br>
   <h4><%= @post.body %></h4>
-  <h6>By: <%= @post.user.username %> -
+  <h6>by: <%= @post.user.username %> -
   <%= time_ago_in_words @post.created_at%> ago</h6>
 
   <br>
@@ -16,12 +19,17 @@
     <% @post.comments.each do |comment| %>
       <blockquote>
         <p><%= comment.body %></p>
-        <h6>By: <%= comment.user.username %> -
-        <%= time_ago_in_words comment.created_at%> ago</h6>
+        <h6>by: <%= comment.user.username %> -
+        <%= time_ago_in_words comment.created_at%> ago
+        <% if session[:user_id] == comment.user_id or session[:user_id] == 1 %>
+           - <%= link_to 'edit', edit_comment_path(comment) %> |
+          <%= link_to 'delete', comment, :method => :delete, data: {confirm: 'are you sure'}  %>
+        <% end %></h6>
       </blockquote>
     <% end %>
 
   <%= form_for [@post, @comment] do |f| %>
+    <h5>join the conversation!</h4>
     <div class='row'>
       <%= f.text_area :body, placeholder: 'what do you want to comment about?', class: "form-control" %>
     </div><br>

@@ -2,16 +2,13 @@
   <h1>Add a team:</h1>
   <%= form_for @team do |t| %>
     <div class='row'>
-      <%= t.text_field :name, placeholder: 'team name', class: "form-control" %>
+      <%= t.text_field :name, placeholder: 'Team Name', class: "form-control" %>
     </div><br>
     <div class='row'>
-      <%= t.text_area :description, placeholder: 'team description', class: "form-control" %>
+      <%= t.text_area :description, placeholder: 'Team Description', class: "form-control" %>
     </div><br>
     <div class='row'>
-      <%= t.text_field :logo, placeholder: 'url to team logo', class: "form-control" %>
-    </div><br>
-    <div class='row'>
-      <%= t.number_field :user_id, placeholder: 'user id', class: "form-control" %>
+      <%= t.text_field :logo, placeholder: 'Team Logo URL', class: "form-control" %>
     </div><br>
     <div class='row'>
       <%= t.submit class: 'btn btn-success'%>

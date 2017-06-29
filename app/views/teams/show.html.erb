@@ -1,5 +1,9 @@
 <div class='team-name'>
-  <div><%= link_to 'edit', edit_team_path %> | <%= link_to 'back', teams_path %></div>
+  <% if session[:user_id] == 1 %>
+    <div><%= link_to 'edit', edit_team_path %> | <%= link_to 'back', teams_path %></div>
+  <% else %>
+    <div><%= link_to 'back', teams_path %></div>
+  <% end %>
   <h1><%= image_tag @team.logo %> <%= @team.name %></h1>
   <p><%= @team.description %></p>
 </div>
@@ -12,17 +16,18 @@
 
   <% @team.posts.each do |post| %>
     <blockquote>
-      <h4><%= link_to post.title, team_post_path(post) %></h4>
-      <%= post.body %>
-      <h6>By: <%= post.user.username %> -
+      <h4 style="text-align:left;float:left"><%= link_to post.title, team_post_path(post) %></h4>
+      <h6 style="text-align:right;float:right;">by: <%= post.user.username %> -
       <%= time_ago_in_words post.created_at%> ago</h6>
+      <p style="clear: both;"><%= post.body %></p>
+      <h6><%= post.comments.count %> replies</h6>
     </blockquote><br>
   <% end %>
 
   <%= form_for [@team, @post] do |f| %>
-  <h4>New Post:</h4>
+  <h4>Start a discussion:</h4>
     <div class='row'>
-      <%= f.text_field :title, placeholder: 'post title', class: "form-control" %>
+      <%= f.text_field :title, placeholder: 'discussion topic', class: "form-control" %>
     </div><br>
     <div class='row'>
       <%= f.text_area :body, placeholder: 'what do you want to talk about?', class: "form-control" %>

@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @post = @comment.post
   end
 
   def edit
@@ -14,9 +15,11 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     @comment.body = params[:comment][:body]
-    @comment.save
-
-    redirect_to edit_comment_path
+    if @comment.save
+      redirect_to team_post_path(@comment.post)
+    else
+      redirect_to edit_comment_path
+    end
   end
 
   def new
@@ -35,5 +38,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    redirect_to team_post_path(@comment.post)
   end
 end

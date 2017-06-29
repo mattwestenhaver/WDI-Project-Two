@@ -1,11 +1,13 @@
-<h2>Edit comment:</h2>
-<%= form_for @comment do |c| %>
-  <div>
-    <%= c.text_area :body, placeholder: 'what do you want to comment about?'%>
-  </div>
-  <div>
-    <%= c.submit %>
-  </div><br>
-<% end %>
+<div class='login'>
+  <h2>Edit comment:</h2><br>
+  <%= form_for @comment do |c| %>
+    <div>
+      <%= c.text_area :body, placeholder: 'what do you want to comment about?', class: "form-control"%>
+    </div><br>
+    <div>
+      <%= c.submit class: 'btn btn-success'%>
+    </div><br>
+  <% end %>
 
-<%= link_to 'cancel', team_post_path %>
+  <%= link_to 'cancel', team_post_path %>
+</div>
