@@ -2,7 +2,7 @@
   <h1>Team Pages:</h1>
   <ul>
     <% @teams.sort.each do |t| %>
-      <li><%= image_tag t.logo %> <%= link_to t.name, team_path(t) %> - <span class='small-font'><%= t.posts.count %> topics</span></li>
+      <li><%= image_tag t.logo %> <%= link_to t.name, team_path(t) %> - <span class='small-font'><%= pluralize(t.posts.count, 'topic') %></span></li>
     <% end %>
     <% if session[:user_id] == 1 %>
       <br><li><%= link_to 'Add a new team', new_team_path %></li>

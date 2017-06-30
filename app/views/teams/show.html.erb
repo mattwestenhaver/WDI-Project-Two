@@ -20,7 +20,7 @@
       <h6 style="text-align:right;float:right;">by: <%= post.user.username %> -
       <%= time_ago_in_words post.created_at%> ago</h6>
       <p style="clear: both;"><%= post.body %></p>
-      <h6><%= post.comments.count %> replies</h6>
+      <h6><%= pluralize(post.comments.count, 'reply') %> </h6>
     </blockquote><br>
   <% end %>
 
