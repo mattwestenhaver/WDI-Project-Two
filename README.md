@@ -15,6 +15,17 @@ View my Trello Board [here](https://trello.com/b/qiAni4Ri/wdi-project-ii)!
 View my project github repositiory [here](https://github.com/mattwestenhaver/WDI-Project-Two)!
 
 ---
+## Installation/Startup Instructions
+* Fork a clone of my application from my github repository onto your computer from the github website
+* Open Terminal and `cd` into the application's folder
+* Run `rails db:create` to create databases for the models on your computer
+* Run `rails db:migrate` to create tables for each of the models to store information in
+* Run `rails server` to start a local server on your computer
+* Go into your web browser and type `localhost:3000` into the URL bar
+* Use the application
+
+
+---
 ## ERD
 ![Imgur](http://i.imgur.com/Uud8VrI.jpg)
 
